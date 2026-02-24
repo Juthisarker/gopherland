@@ -10,7 +10,7 @@ func sendData(ch chan string) {
 }
 
 func main() {
-	ch := make(chan string)
+	ch := make(chan string, 5)
 
 	go sendData(ch)
 
